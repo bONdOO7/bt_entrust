@@ -7,7 +7,7 @@ use Symfony\Component\Finder\Finder;
 $iterator = Finder::create()
     ->files()
     ->name('*.php')
-    ->in($dir = __DIR__ . '/src');
+    ->in($dir = __DIR__ . '/src/');
 
 $versions = GitVersionCollection::create($dir)
     ->add('master', 'master branch')
